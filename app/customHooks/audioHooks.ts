@@ -47,11 +47,11 @@ useEffect (()=> {
 
 	const wavesurfer = WaveSurfer.create({
 		container: container as HTMLElement,
-		waveColor: "rgb(145, 145, 145)",
-		progressColor: "#FFE81A",
+		waveColor: "#8C8C8C",
+		progressColor: "#4C47F6",
 		barWidth: 2, 
 		barHeight: 0.75,
-		height: 100,
+		height: 80,
 	})
 
 	console.log("WaveSurfer instance created");

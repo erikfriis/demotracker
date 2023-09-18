@@ -19,14 +19,20 @@ const Comment: React.FC<CommentProps> = ({ comment, onCommentClick, deleteCommen
       className={CommentCss.container}
       onClick={() => onCommentClick(comment.timestamp)}
     >
-      <div>
+      <div className={CommentCss.upperContainer}>
+				<div>
         <span>Name</span>
         <span> - at {comment.timestamp}</span>
+				</div>
+				<div>
+				<button onClick={() => deleteComment(index)}>Delete</button>
+				</div>
+				
       </div>
       <span>{comment.text}</span>
 			
     </div>
-		<button onClick={() => deleteComment(index)}>Delete</button>
+		
 		</div>
   );
 }

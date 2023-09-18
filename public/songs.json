@@ -1,23 +1,51 @@
 [
 	{
 	"id": 1,
-	"title": "name",
-	"artist": "artist",
-	"artwork": "https://picsum.photos/300/300",
+	"title": "Day and Night",
+	"artist": "ALBA",
+	"artwork": "/songFolders/day-n-night/daynnightomslag.png",
 	"versions": [{"v": "V.3","url": "/songFolders/day-n-night/day-n-night-v3.mp3"},{"v": "V.2","url":"/songFolders/day-n-night/day-n-night-v2.mp3"}, {"v": "V.1","url":"/songFolders/day-n-night/day-n-night-v1.mp3"}]
 },
 {
 	"id": 2,
-	"title": "name",
-	"artist": "artist",
-	"artwork": "https://picsum.photos/300/300",
+	"title": "The Song of Fred",
+	"artist": "Ferd Fredsson",
+	"artwork": "/songFolders/uninvite-me/korvomslag.png",
 	"versions": [{"v": "V.3","url": "/songFolders/day-n-night/day-n-night-v3.mp3"},{"v": "V.2","url":"/songFolders/day-n-night/day-n-night-v2.mp3"}, {"v": "V.1","url":"/songFolders/day-n-night/day-n-night-v1.mp3"}]
 },
 {
 	"id": 3,
-	"title": "name",
+	"title": "Everything",
+	"artist": "Yeaow",
+	"artwork": "/songFolders/everything/sunsetomslag.png",
+	"versions": [{"v": "V.3","url": "songFolders/uninvite-me/uninvite-me-v3.mp3"},{"v": "V.2","url":"songFolders/uninvite-me/uninvite-me-v2.mp3"}, {"v": "V.1","url":"songFolders/uninvite-me/uninvite-me-v1.mp3"}]
+},
+{
+	"id": 4,
+	"title": "Grönhögen by Night",
+	"artist": "Samuraii",
+	"artwork": "/songFolders/imgfornow/bondeomslag.png",
+	"versions": [{"v": "V.3","url": "songFolders/uninvite-me/uninvite-me-v3.mp3"},{"v": "V.2","url":"songFolders/uninvite-me/uninvite-me-v2.mp3"}, {"v": "V.1","url":"songFolders/uninvite-me/uninvite-me-v1.mp3"}]
+},
+{
+	"id": 5,
+	"title": "song title here",
+	"artist": "Another one",
+	"artwork": "/songFolders/imgfornow/elinoromslag.png",
+	"versions": [{"v": "V.3","url": "songFolders/uninvite-me/uninvite-me-v3.mp3"},{"v": "V.2","url":"songFolders/uninvite-me/uninvite-me-v2.mp3"}, {"v": "V.1","url":"songFolders/uninvite-me/uninvite-me-v1.mp3"}]
+},
+{
+	"id": 6,
+	"title": "song title here",
+	"artist": "DJ Khalid",
+	"artwork": "/songFolders/imgfornow/myomslag.png",
+	"versions": [{"v": "V.3","url": "songFolders/uninvite-me/uninvite-me-v3.mp3"},{"v": "V.2","url":"songFolders/uninvite-me/uninvite-me-v2.mp3"}, {"v": "V.1","url":"songFolders/uninvite-me/uninvite-me-v1.mp3"}]
+},
+{
+	"id": 7,
+	"title": "song title here",
 	"artist": "artist",
-	"artwork": "https://picsum.photos/300/300",
+	"artwork": "/songFolders/imgfornow/joelomslag.png",
 	"versions": [{"v": "V.3","url": "songFolders/uninvite-me/uninvite-me-v3.mp3"},{"v": "V.2","url":"songFolders/uninvite-me/uninvite-me-v2.mp3"}, {"v": "V.1","url":"songFolders/uninvite-me/uninvite-me-v1.mp3"}]
 }
 ]

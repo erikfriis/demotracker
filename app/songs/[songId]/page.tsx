@@ -1,6 +1,11 @@
 import AudioPlayerStripped from "@/app/components/AudioPlayerStripped";
 import Songs from "../../../public/songs.json"
 
+import PageCss from "./page.module.css"
+
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+
 import { AudioProvider } from "@/app/context/AudioContext";
 
 interface Params {
@@ -33,14 +38,24 @@ if (!selectedItem) {
 
 	return (
 		<AudioProvider>
-			<div>
+			<div className={PageCss.mainWrapper}>
+<Header/>
+<div className={PageCss.divider}>
+		<h2>Versions</h2>
+	</div>
+			<div className={PageCss.songWrapper}>
 				{selectedItem.versions.map((version: VersionType, index: number) => {
 					return (
+						<div className={PageCss.innerSongWrapper}>
 						<AudioPlayerStripped key={index} song={selectedItem} version = {index}/>
+						</div>
 					)
 				})}
 			</div>
+			<Footer/>
+			</div>
 		</AudioProvider>
+		
 	)
 }
 

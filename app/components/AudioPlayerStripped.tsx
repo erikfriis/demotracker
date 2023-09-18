@@ -72,27 +72,29 @@ return(<div className={AudioPlayerStrippedCss.audioPlayerWrapper}>
 <button onClick={() => handlePlayPause()}
 			className={AudioPlayerStrippedCss.playPauseBtn}
 			aria-label="Play or Pause">
-				{isPlaying ? "Stop" : "Play"}
+			{!isPlaying ? (<div className={AudioPlayerStrippedCss.playPauseWrapper}><img src="/assets/playicon.svg" className={AudioPlayerStrippedCss.playIcon}/></div>) :( <div className={AudioPlayerStrippedCss.playPauseWrapper}><img src="/assets/pauseicon.svg" className={AudioPlayerStrippedCss.pauseIcon}/></div>)}
 			</button>
 	</div>
 	<div className={AudioPlayerStrippedCss.waveformContainer}>
+		<div className={`${AudioPlayerStrippedCss.durationWrapper} ${AudioPlayerStrippedCss.durationCount}`}>
 			<div className={AudioPlayerStrippedCss.duration}>
 				{calculateTime(currentTime)}
+			</div>
 			</div>
 
 				<div id={`wavesurfer-container${song.id}${label}${version}`}
 				className={AudioPlayerStrippedCss.waveform} ref={audioPlayerRef}></div>
-
+<div className={`${AudioPlayerStrippedCss.durationWrapper} ${AudioPlayerStrippedCss.durationCalc}`}>
 				<div className={AudioPlayerStrippedCss.duration}>
 					{duration && calculateTime(duration)}
 				</div>
-
+				</div>
 		</div>
 </div>
-<div>
-	<input type="text" value={newComment} onChange={(e) => setNewComment(e.target.value)}
-	placeholder="Add a comment"/>
-	<button onClick={addComment}>Comment</button>
+<div className={AudioPlayerStrippedCss.inputContainer}>
+	<input type="text" value={newComment} className={AudioPlayerStrippedCss.commentInput} onChange={(e) => setNewComment(e.target.value)}
+	placeholder="Write a comment"/>
+	<button className={AudioPlayerStrippedCss.addCommentBtn} onClick={addComment}>Add</button>
 </div>
 <div>
 	{comments.map((comment, index) => (

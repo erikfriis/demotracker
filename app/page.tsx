@@ -5,6 +5,9 @@ import PageCss from "./page.module.css"
 
 import songs from "../public/songs.json"
 import AudioPlayer from './components/AudioPlayer'
+import Header from './components/Header'
+import Categories from './components/Categories'
+import Footer from './components/Footer'
 
 import { AudioProvider } from './context/AudioContext'
 
@@ -30,6 +33,8 @@ if (!songs.length) {
   return (
     <AudioProvider>
     <main className={styles.main}>
+    <Header/>
+    <Categories/>
      <div className={PageCss.songContainer}>
       {songs.map((song: Song) => {
         return (
@@ -40,6 +45,7 @@ if (!songs.length) {
         )
       })}
      </div>
+     <Footer/>
     </main>
     </AudioProvider>
   )

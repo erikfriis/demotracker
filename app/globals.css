@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
 /* Box sizing rules */
 *,
 *::before,
@@ -32,6 +34,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  font-family: "Poppins", sans-serif !important;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -59,6 +62,9 @@ select {
 
 a {
   text-decoration: none;
+  color: black;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
