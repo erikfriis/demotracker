@@ -1,0 +1,59 @@
+.audioPlayerWrapper {
+}
+
+.flexContainer {
+  display: flex;
+  border-bottom: 1px rgba(218, 218, 218, 0.487) solid;
+  border-top: 1px rgba(218, 218, 218, 0.487) solid;
+}
+
+.innerFlexContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.topContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.leftUpperCornerContainer {
+  display: flex;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.waveformContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.waveform {
+  height: 100px;
+  width: 400px;
+}
+
+.playPauseBtn {
+  background-color: #ffe81a;
+  padding: 1.25rem 1.05rem;
+  box-shadow: none;
+  border: none;
+  border-radius: 50%;
+  margin: 0 0.3rem 0 0.3rem;
+  color: white;
+}
+
+.img {
+  object-fit: fill;
+  width: 200px;
+  height: 200px;
+}

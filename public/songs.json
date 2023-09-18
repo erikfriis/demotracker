@@ -1,0 +1,23 @@
+[
+	{
+	"id": 1,
+	"title": "name",
+	"artist": "artist",
+	"artwork": "https://picsum.photos/300/300",
+	"versions": [{"v": "V.3","url": "/songFolders/day-n-night/day-n-night-v3.mp3"},{"v": "V.2","url":"/songFolders/day-n-night/day-n-night-v2.mp3"}, {"v": "V.1","url":"/songFolders/day-n-night/day-n-night-v1.mp3"}]
+},
+{
+	"id": 2,
+	"title": "name",
+	"artist": "artist",
+	"artwork": "https://picsum.photos/300/300",
+	"versions": [{"v": "V.3","url": "/songFolders/day-n-night/day-n-night-v3.mp3"},{"v": "V.2","url":"/songFolders/day-n-night/day-n-night-v2.mp3"}, {"v": "V.1","url":"/songFolders/day-n-night/day-n-night-v1.mp3"}]
+},
+{
+	"id": 3,
+	"title": "name",
+	"artist": "artist",
+	"artwork": "https://picsum.photos/300/300",
+	"versions": [{"v": "V.3","url": "songFolders/uninvite-me/uninvite-me-v3.mp3"},{"v": "V.2","url":"songFolders/uninvite-me/uninvite-me-v2.mp3"}, {"v": "V.1","url":"songFolders/uninvite-me/uninvite-me-v1.mp3"}]
+}
+]
