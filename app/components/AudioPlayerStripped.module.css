@@ -11,6 +11,19 @@
   padding: 0.5rem 0 0rem 0.5rem;
 }
 
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.versionTag {
+  background-color: #4c47f6;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: white;
+}
+
 .waveformContainer {
   display: flex;
   justify-content: center;
@@ -24,6 +37,7 @@
   transform: translateY(-15px);
   height: 50px;
   width: 1000px;
+  cursor: pointer;
 }
 
 .durationWrapper {
@@ -67,6 +81,7 @@
   border-radius: 50%;
   margin: 0 0.3rem 0 0.3rem;
   color: white;
+  cursor: pointer;
 }
 
 .playPauseWrapper {
@@ -106,6 +121,14 @@
   font-size: 0.8rem;
 }
 
+.inputContainer input {
+  font-size: 0.8rem;
+}
+
+.inputContainer input:focus {
+  outline: none;
+}
+
 .commentInput {
   width: 85%;
   height: 25px;
@@ -113,9 +136,46 @@
 }
 
 .addCommentBtn {
-  width: 5%;
+  width: 40px;
   font-size: 0.8rem;
   height: 25px;
   background-color: rgb(255, 255, 255);
+  background-color: #4c47f6;
+  color: white;
   border: 1px solid rgb(240, 240, 240);
+  cursor: pointer;
+}
+
+@media (max-width: 1310px) {
+  .waveformContainer {
+    width: 830px;
+  }
+  .waveform {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .waveformContainer {
+    width: 630px;
+  }
+  .waveform {
+    width: 600px;
+  }
+}
+@media (max-width: 800px) {
+  .waveformContainer {
+    width: 530px;
+  }
+  .waveform {
+    width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  .waveformContainer {
+    width: 430px;
+  }
+  .waveform {
+    width: 400px;
+  }
 }

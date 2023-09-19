@@ -3,6 +3,8 @@ import styles from './page.module.css'
 import React from 'react'
 import PageCss from "./page.module.css"
 
+import Head from 'next/head'
+
 import songs from "../public/songs.json"
 import AudioPlayer from './components/AudioPlayer'
 import Header from './components/Header'
@@ -31,6 +33,7 @@ if (!songs.length) {
 }
 
   return (
+
     <AudioProvider>
     <main className={styles.main}>
     <Header/>
@@ -48,6 +51,7 @@ if (!songs.length) {
      <Footer/>
     </main>
     </AudioProvider>
+  
   )
 }
 

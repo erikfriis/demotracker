@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
 		<div className={FooterCss.container}>
 			<div className={FooterCss.text}>
 			 <div className={FooterCss.line}></div>
-			 <div className={FooterCss.textContent}> demotracker</div>
+			 <div className={FooterCss.textContent}>demotracker</div>
 <div className={FooterCss.line}></div>
 </div>
 		</div>

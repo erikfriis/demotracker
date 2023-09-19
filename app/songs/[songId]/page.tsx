@@ -3,8 +3,8 @@ import Songs from "../../../public/songs.json"
 
 import PageCss from "./page.module.css"
 
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
+import SongHeader from "@/app/components/SongHeader";
+import SongFooter from "@/app/components/SongFooter";
 
 import { AudioProvider } from "@/app/context/AudioContext";
 
@@ -39,7 +39,7 @@ if (!selectedItem) {
 	return (
 		<AudioProvider>
 			<div className={PageCss.mainWrapper}>
-<Header/>
+<SongHeader song={selectedItem}/>
 <div className={PageCss.divider}>
 		<h2>Versions</h2>
 	</div>
@@ -52,7 +52,7 @@ if (!selectedItem) {
 					)
 				})}
 			</div>
-			<Footer/>
+			<SongFooter song={selectedItem}/>
 			</div>
 		</AudioProvider>
 		

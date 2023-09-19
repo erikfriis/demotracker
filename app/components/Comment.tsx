@@ -12,28 +12,34 @@ interface CommentProps {
 	
 }
 
+
+const formatTime = (seconds: number): string => {
+  const min = Math.floor(seconds / 60);
+  const sec = seconds % 60;
+  return `${min}:${sec < 10 ? '0' + sec : sec}`;
+};
+
 const Comment: React.FC<CommentProps> = ({ comment, onCommentClick, deleteComment,index }) => {
   return (
-		<div>
-    <div
-      className={CommentCss.container}
-      onClick={() => onCommentClick(comment.timestamp)}
-    >
+		
+    <div className={CommentCss.container} >
       <div className={CommentCss.upperContainer}>
-				<div>
-        <span>Name</span>
-        <span> - at {comment.timestamp}</span>
+				<div className={CommentCss.infoContainer} onClick={() => onCommentClick(comment.timestamp)}>
+        <span>Note</span>
+        <span> at {formatTime(comment.timestamp)}</span>
 				</div>
-				<div>
-				<button onClick={() => deleteComment(index)}>Delete</button>
+				<div className={CommentCss.deleteBtnContainer}>
+				<button className={CommentCss.deleteBtn} onClick={() => deleteComment(index)}><img src={"/assets/trashicon.svg"}/></button>
+				
 				</div>
 				
       </div>
-      <span>{comment.text}</span>
-			
+			<div className={CommentCss.commentText}>
+      <span  onClick={() => onCommentClick(comment.timestamp)}>{comment.text}</span>
+			</div>
     </div>
 		
-		</div>
+		
   );
 }
 

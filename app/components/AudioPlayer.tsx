@@ -49,27 +49,32 @@ handlePlayPause,
 
 const copyToClipboard = async () => {
 	const audioId = song.id;
-	const baseUrl = window.location.origin // Gets the base URL
-	const dynamicUrl = `${baseUrl}/songs/${audioId}`
+	const baseUrl = window.location.origin; // Gets the base URL
+	const dynamicUrl = `${baseUrl}/songs/${audioId}`;
+
+	console.log("copyToClipboard called");  // Debug log
+	console.log("URL to copy:", dynamicUrl); // Debug log
+
+	window.focus();
 
 	try {
-		await navigator.clipboard.writeText(dynamicUrl)
-	} catch	(error) {
-		console.log("Failed to copy URL:", error)
+		await navigator.clipboard.writeText(dynamicUrl);
+		alert("Link copied to clipboard");
+	} catch (error) {
+		console.log("Failed to copy URL:", error);
 	}
-
-	
-	
-}
+};
 
 
 	return(
 		<div className={AudioPlayerCss.audioPlayerWrapper}>
 <div className={AudioPlayerCss.flexContainer}>
+<Link key={song.id} href={`/songs/${song.id}`}>
 <div className={AudioPlayerCss.imgContainer}>
 <img src={song.artwork} alt={`${song.artist} - ${song.title} cover art`}
 className={AudioPlayerCss.img} />
 </div>
+</Link>
 <div className={AudioPlayerCss.innerFlexContainer}>
 	<div className={AudioPlayerCss.topContainer}>
 		<div className={AudioPlayerCss.leftUpperCorner}>
@@ -92,7 +97,7 @@ className={AudioPlayerCss.img} />
 				<div className={AudioPlayerCss.lowerContainer}>
 	<button className={AudioPlayerCss.btns}onClick={() => {
 	copyToClipboard()
-	alert("Link copied to clipboard")
+	
 }}>Share</button>
 </div>
 {/* <div className={AudioPlayerCss.version}>

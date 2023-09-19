@@ -74,6 +74,7 @@ return(<div className={AudioPlayerStrippedCss.audioPlayerWrapper}>
 			aria-label="Play or Pause">
 			{!isPlaying ? (<div className={AudioPlayerStrippedCss.playPauseWrapper}><img src="/assets/playicon.svg" className={AudioPlayerStrippedCss.playIcon}/></div>) :( <div className={AudioPlayerStrippedCss.playPauseWrapper}><img src="/assets/pauseicon.svg" className={AudioPlayerStrippedCss.pauseIcon}/></div>)}
 			</button>
+			<div className={AudioPlayerStrippedCss.versionTag}>{song.versions[version].v}</div>
 	</div>
 	<div className={AudioPlayerStrippedCss.waveformContainer}>
 		<div className={`${AudioPlayerStrippedCss.durationWrapper} ${AudioPlayerStrippedCss.durationCount}`}>
@@ -93,7 +94,7 @@ return(<div className={AudioPlayerStrippedCss.audioPlayerWrapper}>
 </div>
 <div className={AudioPlayerStrippedCss.inputContainer}>
 	<input type="text" value={newComment} className={AudioPlayerStrippedCss.commentInput} onChange={(e) => setNewComment(e.target.value)}
-	placeholder="Write a comment"/>
+	placeholder="Write a note"/>
 	<button className={AudioPlayerStrippedCss.addCommentBtn} onClick={addComment}>Add</button>
 </div>
 <div>

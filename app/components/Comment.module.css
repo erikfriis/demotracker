@@ -1,5 +1,42 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 0.25rem 0;
+  width: 100%;
+  line-height: 0.7;
+  padding: 1rem 0 0.5rem 0;
+  cursor: pointer;
+}
+
+.upperContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.deleteBtnContainer {
+  background-color: rgb(255, 255, 255);
+}
+
+.deleteBtn {
+  width: 25px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.deleteBtn button {
+  background-color: rgb(255, 255, 255);
+
+  border: 1 solid rgb(179, 179, 179);
+}
+.deleteBtn button img {
+  width: 100%;
+}
+
+.infoContainer {
+  font-size: 0.8rem;
+  color: rgb(133, 132, 132);
+}
+
+.commentText {
+  font-size: 0.8rem;
 }
