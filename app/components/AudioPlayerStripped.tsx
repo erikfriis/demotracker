@@ -74,7 +74,9 @@ return(<div className={AudioPlayerStrippedCss.audioPlayerWrapper}>
 			aria-label="Play or Pause">
 			{!isPlaying ? (<div className={AudioPlayerStrippedCss.playPauseWrapper}><img src="/assets/playicon.svg" className={AudioPlayerStrippedCss.playIcon}/></div>) :( <div className={AudioPlayerStrippedCss.playPauseWrapper}><img src="/assets/pauseicon.svg" className={AudioPlayerStrippedCss.pauseIcon}/></div>)}
 			</button>
+			<div className={AudioPlayerStrippedCss.versionTagContainer}>
 			<div className={AudioPlayerStrippedCss.versionTag}>{song.versions[version].v}</div>
+			</div>
 	</div>
 	<div className={AudioPlayerStrippedCss.waveformContainer}>
 		<div className={`${AudioPlayerStrippedCss.durationWrapper} ${AudioPlayerStrippedCss.durationCount}`}>
@@ -98,7 +100,7 @@ return(<div className={AudioPlayerStrippedCss.audioPlayerWrapper}>
 	<button className={AudioPlayerStrippedCss.addCommentBtn} onClick={addComment}>Add</button>
 </div>
 <div>
-	{comments.map((comment, index) => (
+	{comments.slice().reverse().map((comment, index) => (
 		<Comment key={index} comment={comment} onCommentClick={jumpToTimestamp} deleteComment={deleteComment} index={index}/>
 	))}
 </div>

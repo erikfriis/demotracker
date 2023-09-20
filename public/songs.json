@@ -8,7 +8,7 @@
 },
 {
 	"id": 2,
-	"title": "The Song of Fred",
+	"title": "The Song of Spaghetti",
 	"artist": "Ferd Fredsson",
 	"artwork": "/songFolders/uninvite-me/korvomslag.png",
 	"versions": [{"v": "V.3","url": "/songFolders/day-n-night/day-n-night-v3.mp3"},{"v": "V.2","url":"/songFolders/day-n-night/day-n-night-v2.mp3"}, {"v": "V.1","url":"/songFolders/day-n-night/day-n-night-v1.mp3"}]
