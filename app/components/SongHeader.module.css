@@ -1,0 +1,23 @@
+.headerWrapper {
+  width: 80vw;
+  padding: 5rem 0;
+  background-color: #f3f431;
+  position: relative;
+}
+
+.logo {
+  margin-left: 1rem;
+}
+
+.text {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 629px) {
+  .headerWrapper {
+    width: 100vw;
+  }
+}

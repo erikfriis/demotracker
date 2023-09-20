@@ -8,8 +8,7 @@ import Link from "next/link";
 
 import { useAudioPlayer } from "../customHooks/audioHooks";
 
-import playicon from "../../public/assets/playicon.svg"
-import pauseicon from "../../public/assets/pauseicon.svg"
+
 
 
 interface Song {
@@ -50,71 +49,84 @@ handlePlayPause,
 
 const copyToClipboard = async () => {
 	const audioId = song.id;
-	const baseUrl = window.location.origin // Gets the base URL
-	const dynamicUrl = `${baseUrl}/songs/${audioId}`
+	const baseUrl = window.location.origin; // Gets the base URL
+	const dynamicUrl = `${baseUrl}/songs/${audioId}`;
+
+	console.log("copyToClipboard called");  // Debug log
+	console.log("URL to copy:", dynamicUrl); // Debug log
+
+	window.focus();
 
 	try {
-		await navigator.clipboard.writeText(dynamicUrl)
-	} catch	(error) {
-		console.log("Failed to copy URL:", error)
+		await navigator.clipboard.writeText(dynamicUrl);
+		alert("Link copied to clipboard");
+	} catch (error) {
+		console.log("Failed to copy URL:", error);
 	}
-
-	
-	
-}
+};
 
 
 	return(
 		<div className={AudioPlayerCss.audioPlayerWrapper}>
 <div className={AudioPlayerCss.flexContainer}>
+<Link key={song.id} href={`/songs/${song.id}`}>
 <div className={AudioPlayerCss.imgContainer}>
 <img src={song.artwork} alt={`${song.artist} - ${song.title} cover art`}
 className={AudioPlayerCss.img} />
 </div>
+</Link>
 <div className={AudioPlayerCss.innerFlexContainer}>
 	<div className={AudioPlayerCss.topContainer}>
 		<div className={AudioPlayerCss.leftUpperCorner}>
 			<button onClick={() => handlePlayPause(!isPlaying)}
 			className={AudioPlayerCss.playPauseBtn}
 			aria-label="Play or Pause">
-				{/* {isPlaying ? "Stop" : "Play"} */}
-			{isPlaying ? (<img src={}/>) : <img src={}/>}
+			{!isPlaying ? (<div className={AudioPlayerCss.playPauseWrapper}><img src="/assets/playicon.svg" className={AudioPlayerCss.playIcon}/></div>) :( <div className={AudioPlayerCss.playPauseWrapper}><img src="/assets/pauseicon.svg" className={AudioPlayerCss.pauseIcon}/></div>)}
 			</button>
-		</div>
+		
 		<Link key={song.id} href={`/songs/${song.id}`}>
 		<div className={AudioPlayerCss.textContainer}>
+		<div className={AudioPlayerCss.smallerText}>{song?.artist}</div>
 			<div className={AudioPlayerCss.biggerText}>{song?.title}</div>
-			<div className={AudioPlayerCss.smallerText}>{song?.artist}</div>
+			
 		</div>
 		</Link>
-
-		<div className={AudioPlayerCss.topRightCorner}>{song.versions[0].v}</div>
+		</div>
+		<div className={AudioPlayerCss.topRightCorner}>
+		
+				<div className={AudioPlayerCss.lowerContainer}>
+	<button className={AudioPlayerCss.btns}onClick={() => {
+	copyToClipboard()
+	
+}}>Share</button>
+</div>
+{/* <div className={AudioPlayerCss.version}>
+			{song.versions[0].v}
+				</div> */}
+				</div>
 
 	</div>
 
 	<div className={AudioPlayerCss.waveformContainer}>
+		<div className={`${AudioPlayerCss.durationWrapper} ${AudioPlayerCss.durationCount}`}>
 			<div className={AudioPlayerCss.duration}>
 				{calculateTime(currentTime)}
+			</div>
 			</div>
 
 				<div id={`wavesurfer-container${song.id}${label}${version}`}
 				className={AudioPlayerCss.waveform} ref={audioPlayerRef}></div>
-
+<div className={`${AudioPlayerCss.durationWrapper} ${AudioPlayerCss.durationCalc}`}>
 				<div className={AudioPlayerCss.duration}>
 					{duration && calculateTime(duration)}
 				</div>
-
+				</div>
 		</div>
-
+		
 </div>
 
 
-<div className={AudioPlayerCss.lowerContainer}>
-<button onClick={() => {
-	copyToClipboard()
-	alert("Link copied to clipboard")
-}}>Copy link</button>
-</div>
+
 
 
 </div>

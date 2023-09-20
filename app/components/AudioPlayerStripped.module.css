@@ -1,0 +1,191 @@
+.flexContainer {
+  border-bottom: 1px rgba(218, 218, 218, 0.487) solid;
+
+  margin: 1rem 0;
+}
+
+.innerFlexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 0 0rem 0.5rem;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.versionTagContainer {
+  background-color: #4c47f6;
+  border-radius: 50%;
+  position: relative;
+  width: 38px;
+  height: 38px;
+}
+
+.versionTag {
+  color: white;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.waveformContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1030px;
+  height: 100px;
+  position: relative;
+}
+
+.waveform {
+  transform: translateY(-15px);
+  height: 50px;
+  width: 1000px;
+  cursor: pointer;
+}
+
+.durationWrapper {
+  padding: 0.05rem;
+  width: 40px;
+  height: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.durationCount {
+  position: absolute;
+  left: 0;
+}
+.durationCalc {
+  position: absolute;
+  right: 0;
+}
+
+.duration {
+  font-size: 0.6rem;
+  color: #4c47f6;
+  color: rgb(206, 206, 206);
+  background-color: black;
+  /* mix-blend-mode: overlay; */
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.playPauseBtn {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: #4c47f6;
+  padding: 0.6rem;
+  box-shadow: none;
+  border: none;
+  border-radius: 50%;
+  margin: 0 0.3rem 0 0.3rem;
+  color: white;
+  cursor: pointer;
+}
+
+.playPauseWrapper {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  position: relative;
+}
+
+.playIcon {
+  width: 80%;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pauseIcon {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  /* background-color: rgb(238, 237, 237); */
+  border: 1px solid rgb(240, 240, 240);
+}
+
+.inputContainer input::placeholder {
+  font-size: 0.8rem;
+}
+
+.inputContainer input {
+  font-size: 0.8rem;
+}
+
+.inputContainer input:focus {
+  outline: none;
+}
+
+.commentInput {
+  width: 85%;
+  height: 25px;
+  border: 1px solid rgb(240, 240, 240);
+}
+
+.addCommentBtn {
+  width: 40px;
+  font-size: 0.8rem;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+  background-color: #4c47f6;
+  color: white;
+  border: 1px solid rgb(240, 240, 240);
+  cursor: pointer;
+}
+
+@media (max-width: 1310px) {
+  .waveformContainer {
+    width: 830px;
+  }
+  .waveform {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .waveformContainer {
+    width: 630px;
+  }
+  .waveform {
+    width: 600px;
+  }
+}
+@media (max-width: 800px) {
+  .waveformContainer {
+    width: 530px;
+  }
+  .waveform {
+    width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  .waveformContainer {
+    width: 430px;
+  }
+  .waveform {
+    width: 400px;
+  }
+}

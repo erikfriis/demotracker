@@ -1,0 +1,41 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+}
+
+.divider {
+  margin-top: 2rem;
+  border-bottom: 1px solid rgba(166, 166, 166, 0.421);
+  display: flex;
+  justify-content: start;
+  width: 1030px;
+}
+
+.divider h2 {
+  font-weight: 300;
+}
+
+@media (max-width: 1310px) {
+  .divider {
+    width: 830px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .divider {
+    width: 630px;
+  }
+}
+@media (max-width: 800px) {
+  .divider {
+    width: 530px;
+  }
+}
+@media (max-width: 600px) {
+  .divider {
+    width: 430px;
+  }
+}
